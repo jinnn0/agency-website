@@ -1,0 +1,56 @@
+.header {
+  position: fixed;
+  width: 100%; 
+
+  .header-container {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: 768px) {
+      height: 128px;
+    }
+
+    .logo {
+      a {
+        font-size: 0.8rem;
+        letter-spacing: 0.5rem;
+        font-weight: 700;
+
+        @media (min-width: 768px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .hamburger {
+      width: 15px;
+      height: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+
+      @media (min-width: 768px) {
+        width: 25px;
+        height: 25px;
+      }
+
+      span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: black;
+      }
+
+      span:nth-child(2) {
+        margin-top: 3px;
+
+        @media (min-width: 768px) {
+          margin-top: 7px;
+        }
+      }
+    }
+  }
+}
