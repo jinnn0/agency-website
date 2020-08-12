@@ -1,66 +1,66 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import gsap from "gsap";
 import "./styles/App.scss";
 
+// componenets
 import Header from "./components/Header";
-import Banner from "./components/Banner";
-import Cases from "./components/Cases";
-import IntroOverlay from "./components/IntroOverlay";
+
+// pages
+import Home from "./pages/Home";
+import CaseStudies from "./pages/CaseStudies";
+import Approach from "./pages/Approach";
+import Services from "./pages/Services";
+import About from "./pages/About";
 import Nav from "./components/Nav";
 
+const routes = [
+  { path: "/", name: "Home", Component: Home },
+  { path: "/about-us", name: "About Us", Component: About },
+  { path: "/services", name: "Services", Component: Services },
+  { path: "/approach", name: "Approach", Component: Approach },
+  { path: "/case-studies", name: "Case Studies", Component: CaseStudies }
+];
+
 function App() {
+  // to prevent html markup flashing before the full DOM load
+  gsap.to("body", 0, { css: { visibility: "visible" } });
+
+  let [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+
   useEffect(() => {
-    let vh = window.innerHeight * 0.01;
+    let vh = windowSize.height * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
 
-    // to prevent html markup flashing before the full DOM load
-    // once all DOM elements have been loaded set body to visible
-    gsap.to("body", 0, { css: { visibility: "visible" } });
-
-    const tl = gsap.timeline();
-
-    tl.from(".line span", 1.8, {
-      y: 100,
-      ease: "power4.out",
-      delay: 1,
-      skewY: 7,
-      stagger: {
-        amount: 0.3,
-      },
-    })
-      .to(".overlay-top", 1.6, {
-        height: 0,
-        ease: "expo.inOut",
-        stagger: 0.4,
-      })
-      .to(".overlay-bottom", 1.6, {
-        width: 0,
-        ease: "expo.inOut",
-        delay: -0.8,
-        stagger: {
-          amount: 0.4,
-        },
-      })
-      // to compelety remove overlay
-      .to(".intro-overlay", 0, { display: "none" })
-      .from(".case-img img", 1.6, {
-        scale: 1.3,
-        ease: "expo.inOut",
-        delay: -2,
-        stagger: {
-          amount: 0.4,
-        },
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
       });
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   });
 
   return (
-    <div className="App">
-      <IntroOverlay />
+    <Router>
+      <Header windowSize={windowSize} />
       <Nav />
-      <Header />
-      <Banner />
-      <Cases />
-    </div>
+      <div className="main">
+        <Switch>
+          {routes.map(({ path, Component }) => (
+            <Route key={path} exact path={path} component={Component} />
+          ))}
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

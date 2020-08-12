@@ -2,11 +2,10 @@ import React from "react";
 import { ReactComponent as RightArrow } from "../assets/arrow-right.svg";
 
 function Banner() {
-
   return (
-    <section className="main">
-      <div className="page-container">
-        <div className="main-container">
+    <section className="banner">
+      <div className="container">
+        <div className="banner-container">
           <h2>
             <p className="line">
               <span>Creating unique brands is</span>

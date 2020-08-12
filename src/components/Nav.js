@@ -1,24 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
     <nav className="nav">
-      <div className="page-container">
+      <div className="container">
         <div className="nav-container">
           <div className="nav-col menu">
             <h3 className="nav-label">Menu</h3>
             <ul className="nav-links">
               <li>
-                <a href="">Case Studies</a>
+                <Link to="case-studies">Case Studies</Link>
               </li>
               <li>
-                <a href="">Approach</a>
+                <Link to="approach">Approach</Link>
               </li>
               <li>
-                <a href="">Services</a>
+                <Link to="services">Services</Link>
               </li>
               <li>
-                <a href="">About Us</a>
+                <Link to="about-us">About Us</Link>
               </li>
             </ul>
           </div>
@@ -29,17 +30,16 @@ function Nav() {
               <ul className="nav-info">
                 <li className="nav-info-label">Email</li>
                 <li>
-                  <a href="">Get in touch with us</a>
+                  <Link to="/contact">Get in touch with us</Link>
                 </li>
                 <li>
-                  <a href="Get a free audit"></a>
+                  <Link to="/audit">Get a free audit</Link>
                 </li>
               </ul>
+
               <ul className="nav-info">
                 <li className="nav-info-label">Phone</li>
-                <li>
-                  <a href="">+41 (0) 79 510 28 70</a>
-                </li>
+                <li> +41 (0) 79 510 28 70 </li>
               </ul>
               <ul className="nav-info">
                 <li className="nav-info-label">Headquarter</li>
@@ -49,12 +49,8 @@ function Nav() {
               </ul>
               <ul className="nav-info">
                 <li className="nav-info-label">Legal</li>
-                <li>
-                  <a href="">Privacy</a>
-                </li>
-                <li>
-                  <a href="">Cookies</a>
-                </li>
+                <li>Privacy</li>
+                <li>Cookies</li>
               </ul>
             </div>
           </div>

@@ -6,7 +6,7 @@
 
 html,
 body {
-  visibility: hidden;
+  // visibility: hidden;`
   font-size: 16px;
   overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -16,13 +16,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.page-container {
+.container {
   padding-left: 20px;
-  padding-right: 20px; 
+  padding-right: 20px;
   // max-width: 1700px;
   max-width: 1200px;
   min-width: 310px;
   margin: 0 auto;
+  height: 100%;
 
   @media (min-width: 900px) {
     padding-left: 50px;

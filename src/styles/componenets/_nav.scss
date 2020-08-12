@@ -1,17 +1,23 @@
 .nav {
-  display: none;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: $yellow;
   padding-top: 20px;
   padding-bottom: 20px;
+  overflow: hidden;
+  display: none;
+  height: 50vh;
 
   .nav-container {
-    min-height: 50vh;
-
     @media (min-width: 580px) {
       display: flex;
       justify-content: space-between;
     }
+
     .nav-col {
+      flex: 1;
       margin-top: 55px;
 
       @media (min-width: 768px) {
@@ -21,6 +27,10 @@
       .nav-label {
         font-weight: 400;
         margin-bottom: 2rem;
+      }
+
+      li {
+        margin-bottom: 0.7rem;
       }
 
       a {
@@ -44,23 +54,13 @@
     }
 
     .menu {
-      flex: 1;
-
-      .nav-links {
-        li {
-          margin-bottom: 0.7rem;
-        }
-
-        a {
-          font-size: 2rem;
-          font-weight: 500;
-        }
+      li {
+        font-size: 2rem;
+        font-weight: 500;
       }
     }
 
     .contact {
-      flex: 1;
-
       .nav-infos {
         @media (min-width: 550px) {
           display: flex;
@@ -81,7 +81,6 @@
         }
 
         li {
-          margin-bottom: 0.7rem;
           font-weight: 300;
         }
       }

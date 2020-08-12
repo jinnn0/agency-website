@@ -1,0 +1,15 @@
+.main {
+  transform: translateY(0);
+  position: relative;
+}
+
+.page {
+  height: 100vh;
+
+  .page-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

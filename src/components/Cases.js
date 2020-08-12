@@ -7,34 +7,25 @@ const cases = [
     id: 1,
     subtitle: "Curology",
     title: "A custom formula for your skin's unique needs",
-    img: "curology",
+    img: "curology"
   },
   {
     id: 2,
     subtitle: "Yourspace",
     title: "Open space floor plans for your next venture",
-    img: "yourspace",
+    img: "yourspace"
   },
   {
     id: 3,
     subtitle: "Airpod",
     title: "Wireless. Efforless. Magical",
-    img: "airpod",
-  },
+    img: "airpod"
+  }
 ];
 
 function Cases() {
   return (
     <section className="cases">
-      <div className="case-nav">
-        <div className="case-arrow prev disabled">
-          <CasePrev />
-        </div>
-        <div className="case-arrow next">
-          <CaseNext />
-        </div>
-      </div>
-
       <ul className="case-items">
         {cases.map((caseItem) => (
           <div className="case-item" key={caseItem.id}>
@@ -52,6 +43,15 @@ function Cases() {
           </div>
         ))}
       </ul>
+
+      <div className="case-nav">
+        <div className="case-arrow prev disabled">
+          <CasePrev />
+        </div>
+        <div className="case-arrow next">
+          <CaseNext />
+        </div>
+      </div>
     </section>
   );
 }

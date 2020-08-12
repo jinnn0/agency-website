@@ -1,11 +1,13 @@
-.main {
-  .main-container {
-    height: 50vh; // fallback
-    height: calc(var(--vh, 1vh) * 50);
+.banner {
+  height: 50vh; // fallback
+  height: calc(var(--vh, 1vh) * 50);
+  background-color: $white;
+
+  .banner-container {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: $white;
 
     h2 {
       font-size: 1.2rem;
@@ -14,7 +16,6 @@
       margin-top: 55px;
       color: $white;
       mix-blend-mode: difference;
-      z-index: 200;
 
       @media (min-width: 425px) {
         font-size: 1.96rem;
