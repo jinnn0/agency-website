@@ -56,13 +56,13 @@ function App() {
     <Router>
       <Header windowSize={windowSize} />
       <Nav />
-      {/* <div className="main">
+      <div className="main">
         <Switch>
           {routes.map(({ path, Component }) => (
             <Route key={path} exact path={path} component={Component} />
           ))}
         </Switch>
-      </div> */}
+      </div>
     </Router>
   );
 }
