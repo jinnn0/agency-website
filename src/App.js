@@ -15,25 +15,26 @@ import About from "./pages/About";
 import Nav from "./components/Nav";
 
 const routes = [
-  { path: "/", name: "Home", Component: Home },
-  { path: "/about-us", name: "About Us", Component: About },
-  { path: "/services", name: "Services", Component: Services },
-  { path: "/approach", name: "Approach", Component: Approach },
-  { path: "/case-studies", name: "Case Studies", Component: CaseStudies }
+  { path: "/agency-website/", name: "Home", Component: Home },
+  { path: "/agency-website/about-us", name: "About Us", Component: About },
+  { path: "/agency-website/services", name: "Services", Component: Services },
+  { path: "/agency-website/approach", name: "Approach", Component: Approach },
+  {
+    path: "/agency-website/case-studies",
+    name: "Case Studies",
+    Component: CaseStudies
+  }
 ];
 
 function App() {
-  // to prevent html markup flashing before the full DOM load
-  gsap.to("body", 0, { css: { visibility: "visible" } });
-
   let [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight
   });
 
   useEffect(() => {
-    let vh = windowSize.height * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    // to prevent html markup flashing before the full DOM load
+    gsap.to("body", 0, { visibility: "visible" });
 
     function handleResize() {
       setWindowSize({
@@ -41,6 +42,8 @@ function App() {
         height: window.innerHeight
       });
     }
+    let vh = windowSize.height * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
 
     window.addEventListener("resize", handleResize);
 
@@ -53,13 +56,13 @@ function App() {
     <Router>
       <Header windowSize={windowSize} />
       <Nav />
-      <div className="main">
+      {/* <div className="main">
         <Switch>
           {routes.map(({ path, Component }) => (
             <Route key={path} exact path={path} component={Component} />
           ))}
         </Switch>
-      </div>
+      </div> */}
     </Router>
   );
 }

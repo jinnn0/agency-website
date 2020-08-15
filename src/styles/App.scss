@@ -1,5 +1,5 @@
-@import "./base/global.scss";
 @import "./base/variables.scss";
+@import "./base/global.scss";
 @import "./componenets/header.scss";
 @import "./componenets/banner.scss";
 @import "./componenets/cases.scss";
@@ -7,3 +7,21 @@
 @import "./componenets/nav";
 @import "./componenets/page";
 
+
+/* z-index */
+.header {
+  z-index: 2;
+}
+
+.intro-overlay .top,
+.intro-overlay .bottom {
+  z-index: 1;
+}
+
+.banner-container h2 {
+  z-index: 1;
+}
+
+.main {
+  z-index: 1;
+}

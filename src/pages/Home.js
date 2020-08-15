@@ -29,8 +29,6 @@ let homeAnimation = (completeAnimation) => {
         amount: 0.4
       }
     })
-    // to compelety remove overlay
-    .to(".intro-overlay", 0, { display: "none" })
     .from(".case-img img", 1.6, {
       scale: 1.3,
       ease: "expo.inOut",

@@ -10,16 +10,16 @@ function Nav() {
             <h3 className="nav-label">Menu</h3>
             <ul className="nav-links">
               <li>
-                <Link to="case-studies">Case Studies</Link>
+                <Link to="/agency-website/case-studies">Case Studies</Link>
               </li>
               <li>
-                <Link to="approach">Approach</Link>
+                <Link to="/agency-website/approach">Approach</Link>
               </li>
               <li>
-                <Link to="services">Services</Link>
+                <Link to="/agency-website/services">Services</Link>
               </li>
               <li>
-                <Link to="about-us">About Us</Link>
+                <Link to="/agency-website/about-us">About Us</Link>
               </li>
             </ul>
           </div>

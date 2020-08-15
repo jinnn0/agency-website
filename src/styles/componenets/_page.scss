@@ -1,10 +1,6 @@
-.main {
-  transform: translateY(0);
-  position: relative;
-}
-
 .page {
   height: 100vh;
+  background-color: $white;
 
   .page-container {
     height: 100%;

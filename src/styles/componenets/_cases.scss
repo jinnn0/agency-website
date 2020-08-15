@@ -1,4 +1,11 @@
 .cases {
+  // was needed for mobile screen
+  // to keep the overlay-bottom to be position
+  // relevant to the boddom half of body and
+  // not the bottom of last case element
+  height: 50vh;
+  height: calc(var(--vh, 1vh) * 50);
+
   .case-nav {
     width: 100%;
     height: 100px;
