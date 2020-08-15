@@ -1,28 +1,27 @@
 {
   "files": {
-    "main.css": "/agency-website/static/css/main.2f9f1bed.chunk.css",
-    "main.js": "/agency-website/static/js/main.6f7ba079.chunk.js",
-    "main.js.map": "/agency-website/static/js/main.6f7ba079.chunk.js.map",
+    "main.css": "/agency-website/static/css/main.8a7b36ee.chunk.css",
+    "main.js": "/agency-website/static/js/main.9a8f3fa9.chunk.js",
+    "main.js.map": "/agency-website/static/js/main.9a8f3fa9.chunk.js.map",
     "runtime-main.js": "/agency-website/static/js/runtime-main.31e15fbc.js",
     "runtime-main.js.map": "/agency-website/static/js/runtime-main.31e15fbc.js.map",
-    "static/js/2.4236acaf.chunk.js": "/agency-website/static/js/2.4236acaf.chunk.js",
-    "static/js/2.4236acaf.chunk.js.map": "/agency-website/static/js/2.4236acaf.chunk.js.map",
+    "static/js/2.f85e2bab.chunk.js": "/agency-website/static/js/2.f85e2bab.chunk.js",
+    "static/js/2.f85e2bab.chunk.js.map": "/agency-website/static/js/2.f85e2bab.chunk.js.map",
     "index.html": "/agency-website/index.html",
-    "precache-manifest.b4019ac2ec38e5c1bba0ed6ce0238d89.js": "/agency-website/precache-manifest.b4019ac2ec38e5c1bba0ed6ce0238d89.js",
+    "precache-manifest.bbecc712e47b696d8079ae306c44a021.js": "/agency-website/precache-manifest.bbecc712e47b696d8079ae306c44a021.js",
     "service-worker.js": "/agency-website/service-worker.js",
-    "static/css/main.2f9f1bed.chunk.css.map": "/agency-website/static/css/main.2f9f1bed.chunk.css.map",
-    "static/js/2.4236acaf.chunk.js.LICENSE.txt": "/agency-website/static/js/2.4236acaf.chunk.js.LICENSE.txt",
+    "static/css/main.8a7b36ee.chunk.css.map": "/agency-website/static/css/main.8a7b36ee.chunk.css.map",
+    "static/js/2.f85e2bab.chunk.js.LICENSE.txt": "/agency-website/static/js/2.f85e2bab.chunk.js.LICENSE.txt",
     "static/media/airpod.png": "/agency-website/static/media/airpod.6c13dbdb.png",
     "static/media/arrow-left.f9a44e1c.svg": "/agency-website/static/media/arrow-left.f9a44e1c.svg",
     "static/media/arrow-right.dc372a07.svg": "/agency-website/static/media/arrow-right.dc372a07.svg",
     "static/media/curology.png": "/agency-website/static/media/curology.b4b9554b.png",
-    "static/media/up-arrow-circle.24e8d8f2.svg": "/agency-website/static/media/up-arrow-circle.24e8d8f2.svg",
     "static/media/yourspace.png": "/agency-website/static/media/yourspace.83cb7180.png"
   },
   "entrypoints": [
     "static/js/runtime-main.31e15fbc.js",
-    "static/js/2.4236acaf.chunk.js",
-    "static/css/main.2f9f1bed.chunk.css",
-    "static/js/main.6f7ba079.chunk.js"
+    "static/js/2.f85e2bab.chunk.js",
+    "static/css/main.8a7b36ee.chunk.css",
+    "static/js/main.9a8f3fa9.chunk.js"
   ]
 }
