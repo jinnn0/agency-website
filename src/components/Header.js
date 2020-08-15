@@ -1,86 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
-import gsap from "gsap";
-
-let tl = gsap.timeline();
+import { openMenu, closeMenu } from "../animations/MenuAnimation";
 
 function Header({ history, windowSize }) {
   const [menuState, setMenuState] = useState(false);
 
   useEffect(() => {
+    // listen for page changes
     history.listen(() => {
-      setMenuState(!menuState);
+      setMenuState(menuState === false);
     });
-    if (menuState) {
-      gsap.to("nav", { display: "block" });
-      gsap.to("body", { overflow: "hidden" });
-      tl.to(".main", {
-        duration: 1,
-        y: windowSize.width <= 654 ? "70vh" : windowSize.height / 2,
-        ease: "expo.inOut"
-      })
-        .to(".hamburger-menu span", {
-          duration: "0.6",
-          delay: -1,
-          scaleX: 0,
-          transformOrigin: "50% 0%",
-          ease: "expo.inOut"
-        })
-        .to(".bar-one", 0.3, {
-          delay: -0.6,
-          y: windowSize.width <= 768 ? 3 : 4.5,
-          rotate: "45degree",
-          ease: "expo.inOut"
-        })
-        .to(".bar-two", 0.3, {
-          delay: -0.6,
-          y: windowSize.width <= 768 ? -2 : -4.5,
-          x: windowSize.width <= 768 ? -1 : 0,
-          rotate: "-45degree",
-          ease: "expo.inOut"
-        })
-        .to(".bar-one", 0.4, {
-          scaleX: 1
-        })
-        .to(".bar-two", 0.4, {
-          delay: -0.4,
-          scaleX: 1
-        });
-    } else {
-      tl.to(".main", {
-        duration: 1,
-        y: 0,
-        ease: "expo.inOut"
-      })
-        .to(".hamburger-menu span", {
-          duration: "0.6",
-          scaleX: 0,
-          ease: "expo.inOut",
-          delay: -1
-        })
-        .to(".bar-one", 0.3, {
-          delay: -0.6,
-          y: 0,
-          rotate: 0,
-          ease: "expo.inOut"
-        })
-        .to(".bar-two", 0.3, {
-          delay: -0.6,
-          y: 0,
-          rotate: 0,
-          ease: "expo.inOut"
-        })
-        .to(".bar-one", 0.4, {
-          scaleX: 1
-        })
-        .to(".bar-two", 0.4, {
-          delay: -0.4,
-          scaleX: 1
-        })
-        .to("nav", 0, { display: "none" });
-      gsap.to("body", { overflow: "visible" });
+    if (menuState === true) {
+      console.log("is it true", menuState);
+      openMenu(windowSize.width);
+    } else if (menuState === false) {
+      console.log("is it false", !menuState);
+      closeMenu();
     }
-  });
+  }, [menuState]);
 
   return (
     <div className="header">
