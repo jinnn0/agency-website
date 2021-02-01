@@ -1,7 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Unique landing page animation for virtual design agency homepage.
 
-## Available Scripts
+## Core Packages
+* React
+* React Router
+* Sass
+* GSAP
 
-In the project directory, you can run:
 
-### `npm start`
+## Screenshots
+### Landing page animation
+![screenshot 1](screenshots/screenshot-1.png)
+
+### Home
+![screenshot 2](screenshots/screenshot-2.png)
+
+### Nav
+![screenshot 3](screenshots/screenshot-3.png)
