@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Link, withRouter } from "react-router-dom";
-import { openMenu, closeMenu } from "../animations/MenuAnimation";
+import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
+import { openMenu, closeMenu } from '../animations/MenuAnimation';
 
 function Header({ history, windowSize }) {
   const [menuState, setMenuState] = useState(false);
@@ -10,11 +10,10 @@ function Header({ history, windowSize }) {
     history.listen(() => {
       setMenuState(menuState === false);
     });
+
     if (menuState === true) {
-      console.log("is it true", menuState);
       openMenu(windowSize.width);
     } else if (menuState === false) {
-      console.log("is it false", !menuState);
       closeMenu();
     }
   }, [menuState]);
@@ -24,7 +23,7 @@ function Header({ history, windowSize }) {
       <div className="container">
         <div className="header-container">
           <div className="logo">
-            <Link to="/agency-website">Agency.</Link>
+            <a href="/agency-website/">Agency.</a>
           </div>
 
           <div
