@@ -44,14 +44,17 @@
         width: 100%;
         height: 2px;
         background-color: black;
+        position: relative;
       }
 
-      span:nth-child(2) {
-        margin-top: 3px;
-
-        @media (min-width: 768px) {
-          margin-top: 7px;
-        }
+      .bar-one {
+        transform: rotate(45deg);
+        top: 2px;
+        margin-bottom: 3px;
+      }
+      .bar-two {
+        transform: rotate(-45deg);
+        top: -2px;
       }
     }
   }
