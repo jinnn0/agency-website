@@ -1,0 +1,124 @@
+.cases {
+  // needed for mobile screen
+  // to keep the overlay-bottom to be position
+  // relevant to the boddom half of body and
+  // not the bottom of last case element
+  height: 50vh;
+  height: calc(var(--vh, 1vh) * 50);
+
+  .case-nav {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+
+    .case-arrow {
+      display: none;
+
+      @media (min-width: 768px) {
+        background-color: rgba(0, 0, 0, 0.296);
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      svg {
+        color: $white;
+        width: 30px;
+        height: 30px;
+      }
+      &.disabled {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .case-items {
+    @media (min-width: 768px) {
+      display: flex;
+    }
+    .case-item {
+      background-color: $black;
+      position: relative;
+      cursor: pointer;
+      height: 50vh;
+      height: calc(var(--vh, 1vh) * 50);
+
+      &:hover {
+        .case-img {
+          opacity: 0.4;
+        }
+      }
+
+      @media (min-width: 768px) {
+        flex: 1;
+      }
+      .case-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        overflow: hidden;
+        transition: 0.4s cubic-bezier(0.6, -0.05, 0.1, 0.99);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .case-details {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px;
+        color: $white;
+
+        p {
+          margin-top: 9rem;
+          font-size: 1.2rem;
+          font-weight: 600;
+          opacity: 0.8;
+
+          @media (min-width: 425px) {
+            font-size: 1.4rem;
+          }
+          @media (min-width: 768px) {
+            font-size: 1.6rem;
+          }
+        }
+
+        h2 {
+          margin-top: 0.8rem;
+          width: 85%;
+          font-size: 1.4rem;
+          line-height: 2.2rem;
+
+          @media (min-width: 425px) {
+            font-size: 1.7rem;
+          }
+
+          @media (min-width: 900px) {
+            margin-top: 1.3rem;
+            font-size: 2rem;
+            line-height: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}

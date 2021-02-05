@@ -1,0 +1,12 @@
+.page {
+  height: 100vh;
+  background-color: $white;
+  // background-color: rgba(103, 103, 103, 0.507);
+
+  .page-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
