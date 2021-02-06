@@ -1,11 +1,11 @@
 @import "./base/variables.scss";
 @import "./base/global.scss";
-@import "./componenets/header.scss";
-@import "./componenets/banner.scss";
-@import "./componenets/cases.scss";
-@import "./componenets/intro-overlay";
-@import "./componenets/nav";
-@import "./componenets/page";
+@import "./components/header.scss";
+@import "./components/banner.scss";
+@import "./components/cases.scss";
+@import "./components/intro-overlay";
+@import "./components/nav";
+@import "./components/page";
 
 /* z-index */
 .header {

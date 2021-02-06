@@ -17,13 +17,13 @@ const openMenu = (width) => {
     })
     .to('.bar-one', 0.3, {
       delay: -0.6,
-      top: 2,
+      top: 3.5,
       rotate: '45degree',
       ease: 'expo.inOut'
     })
     .to('.bar-two', 0.3, {
       delay: -0.6,
-      top: width <= 768 ? -3 : -2,
+      top: -4.5,
       rotate: '-45degree',
       ease: 'expo.inOut'
     })

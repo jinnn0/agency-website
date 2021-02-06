@@ -10,8 +10,6 @@
     height: 50vh;
     min-height: 350px;
 
-    // border: 4px solid blue;
-
     @media (min-width: 580px) {
       display: flex;
       justify-content: space-between;
@@ -20,8 +18,6 @@
     .nav-col {
       flex: 1;
       margin-top: 65px;
-
-      // border: 4px solid orange;
 
       @media (min-width: 768px) {
         margin-top: 128px;
