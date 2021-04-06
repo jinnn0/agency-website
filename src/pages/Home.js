@@ -53,7 +53,7 @@ function Home() {
 
   return (
     <>
-      {/* {animationComplete === false ? <IntroOverlay /> : ''} */}
+      {animationComplete === false ? <IntroOverlay /> : ''}
       <Banner />
       <Cases />
     </>
